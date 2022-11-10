@@ -21,7 +21,7 @@ void quicksort (int firstEl, int lastEl)
   int res;
   int i=0;
   int l = firstEl , r = lastEl;
-  int pp = sumdigits(nums[(l + r) / 2]); // Опорным элементом для примера возьмём средний
+  int pp = sumdigits(nums[(l + r) / 2]); 
   
   while (l <= r)
   {
