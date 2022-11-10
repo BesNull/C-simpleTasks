@@ -16,7 +16,7 @@ int sumdigits(int digits){    //log(digitLenght)
     return sum;
 }
 
-void quicksort (int firstEl, int lastEl)  //O(n*logn*log(lLenght)*log(rLenght))  считать левого и правого мб необязательно, надо посмотреть, возможно один из циклов не начинается и будет Только либо log от левого или от правого
+void quicksort (int firstEl, int lastEl)  
 {
   int res;
   int i=0;
