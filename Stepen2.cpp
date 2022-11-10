@@ -14,7 +14,7 @@ int step2(int nums[], int n)
     for (i=0; i<n; i++ ){  //O(n)
         sum=sum + nums[i]; //складываем элементы
     }
-   
+    
     i=0;
     tempsum=abs(sum); //Берем модуль числа
     sum=tempsum;
@@ -26,9 +26,9 @@ int step2(int nums[], int n)
     }
     cout<<i<<endl;
     if (tempsum==pow(2, i))
-        return i;
+        return pow(2, i);
         else
-        return i+1; //Если не равно то прибавляем к степени единицу чтобы выполнялось условие задания
+        return pow(2, i+1); //Если не равно то прибавляем к степени единицу чтобы выполнялось условие задания
     
 }
 
@@ -36,9 +36,11 @@ int step2(int nums[], int n)
 int main()
 {
     
-    int nums[]={4, 1, 1, 1, 1, -16};
+    int nums[]={4, 1, 1, 1, 2, -16};
     
     int numsLen = (sizeof(nums)/sizeof(*nums));
-    cout<<step2(nums, numsLen)<<endl;
+    int Stepen2 = step2(nums, numsLen);
+    cout<<"Stepen2 = "<<Stepen2;
+    
 
 }
