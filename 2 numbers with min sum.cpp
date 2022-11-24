@@ -7,6 +7,28 @@ using namespace std;
  
  int nums[]={4,7,3,5,3,3,11,0};
 
+int max1=nums[0];
+int max2=nums[0];
+
+//второй способ
+void TwoSmallestNums(int arrlen)
+{ 
+  for(int i=0;i<=arrlen-1;i++)
+  {
+    if(nums[i]<max1)
+    { 
+      max2=max1;
+      max1=nums[i];
+    }
+    else
+    {
+     if (nums[i]<max2) max2=nums[i];
+    }
+  }
+}
+
+
+//first
 void quicksort (int firstEl, int lastEl)  
 {
   int res;
@@ -44,8 +66,13 @@ int main()
         cout<<nums[i]<<" ";
         i++;
     }
+    
+    
+    TwoSmallestNums(numsLen);
+    
     int minSum=nums[0]+nums[1];
     cout<<endl;
-    cout<<minSum;
+    cout<<"Two smallest numbers "<<max1<<" "<<max2<<endl;
+    cout<<"Sum = "<<max1+max2;
    // cout<<"MGCD = "<< Fmgcd(nums,numsLen)<<"\n";
 }
